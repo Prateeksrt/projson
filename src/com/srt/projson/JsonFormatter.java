@@ -9,9 +9,9 @@ import java.util.Collections;
 import java.util.List;
 
 public class JsonFormatter {
-    private static List<Character> forwardTabDelimiters = Arrays.asList('{', '[');
-    private static List<Character> backwardTabDelimiter = Arrays.asList('}', ']');
-    private static List<Character> separator = Collections.singletonList(',');
+    public static List<Character> forwardTabDelimiters = Arrays.asList('{', '[');
+    public static List<Character> backwardTabDelimiter = Arrays.asList('}', ']');
+    public static List<Character> separator = Collections.singletonList(',');
 
     private List<String> prefixStack = new ArrayList<>();
 

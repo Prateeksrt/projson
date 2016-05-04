@@ -5,7 +5,14 @@ import java.math.BigInteger;
 import java.util.*;
 
 class ClassWithStringAttribute {
+    public String getValue() {
+        return value;
+    }
+
     private String value;
+
+    public ClassWithStringAttribute() {
+    }
 
     public ClassWithStringAttribute(String value) {
         this.value = value;
@@ -15,6 +22,13 @@ class ClassWithStringAttribute {
 class ClassWithINTAttribute {
     private int value;
 
+    public ClassWithINTAttribute() {
+    }
+
+    public int getValue() {
+        return value;
+    }
+
     public ClassWithINTAttribute(int value) {
         this.value = value;
     }
@@ -23,14 +37,37 @@ class ClassWithINTAttribute {
 class ClassWithINTEGERAttribute {
     private Integer value;
 
+    public Integer getValue() {
+        return value;
+    }
+
+    public ClassWithINTEGERAttribute() {
+    }
+
     public ClassWithINTEGERAttribute(Integer value) {
         this.value = value;
+    }
+}
+
+class ClassWithWithoutDefaultConstructor {
+    public ClassWithWithoutDefaultConstructor(String s) {
     }
 }
 
 class ClassWithIntegerAndStringAttribute {
     private Integer value;
     private String value2;
+
+    public Integer getValue() {
+        return value;
+    }
+
+    public String getValue2() {
+        return value2;
+    }
+
+    public ClassWithIntegerAndStringAttribute() {
+    }
 
     public ClassWithIntegerAndStringAttribute(String value2, Integer value) {
         this.value2 = value2;
