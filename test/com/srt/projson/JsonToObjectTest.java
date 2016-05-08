@@ -18,7 +18,7 @@ public class JsonToObjectTest {
         assertEquals("prateek",object.getValue());
     }
 
-    @Test(expected = NoDefaultConstructorDefined.class)
+    @Test(expected = NoDefaultConstructorException.class)
     public void shouldNoDefaultConstructorDefinedExceptionIfTheClassDoesnotHaveOne() throws Exception {
          ProJson.objectify("{'value':5}",ClassWithWithoutDefaultConstructor.class);
     }
@@ -41,4 +41,6 @@ public class JsonToObjectTest {
         assertEquals(new Integer(5),object.getValue());
         assertEquals("prateek",object.getValue2());
     }
+
+
 }

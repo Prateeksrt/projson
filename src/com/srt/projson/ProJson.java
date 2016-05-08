@@ -19,7 +19,7 @@ public class ProJson {
         try {
             t = theClass.newInstance();
         } catch (InstantiationException e) {
-            throw new NoDefaultConstructorDefined(theClass);
+            throw new NoDefaultConstructorException(theClass);
         }
         String s1 = removeDelimiter(s);
         for(String s2 : s1.split(",")){
@@ -38,7 +38,7 @@ public class ProJson {
     }
 
     private static String removeQuotes(String stringValue) {
-        String newString=null;
+        String newString;
         if(stringValue.endsWith("\'")||stringValue.endsWith("\"")){
             newString=stringValue.substring(0,stringValue.length()-1);
         }else newString = stringValue;
